@@ -42,7 +42,7 @@ $(function() {
         it('names are defined', function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.name).toBeDefined();
-                expect(feed.name).not.toBe(0);
+                expect(feed.name.length).not.toBe(0);
             });
         });
     });
@@ -53,7 +53,7 @@ $(function() {
 
         /* This test ensures the menu element is hidden by default */
         it('is hidden by default', function() {
-            expect(document.body.classList.contains('menu-hidden')).toBeTruthy();
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
 
          /* This test ensures the menu changes visibility when the menu
@@ -67,13 +67,13 @@ $(function() {
             menuIcon.click();
 
             //menu is hidden by default, therefore the menu should be visible now
-            expect(document.body.classList.contains('menu-hidden')).toBeFalsy();
+            expect($('body').hasClass('menu-hidden')).toBeFalsy();
            
             //simulate a menu click
             menuIcon.click();
             
             //now menu should be hidden again
-            expect(document.body.classList.contains('menu-hidden')).toBeTruthy();
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
     });
 
@@ -103,7 +103,7 @@ $(function() {
 
         // Empty the Feed Title
         $('.header-title').empty();
-        var currentFeed
+        var currentFeed;
 
         // Update the Feed to a new feed
         beforeAll(function(done) {
