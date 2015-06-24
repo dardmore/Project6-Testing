@@ -39,6 +39,11 @@ You will learn how to use Jasmine to write a number of tests against a pre-exist
 14. When complete - all of your tests should pass.
 
 
+# Instructions
+1. Open index.html
+2. Jasmine will run a series of functionality tests on the code
+3. Results of the tests are displayed at the bottom of the browser window
+
 NOTES:
 All test cases have been established and pass.
 
