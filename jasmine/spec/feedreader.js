@@ -107,8 +107,9 @@ $(function() {
 
         // Update the Feed to a new feed
         beforeAll(function(done) {
-            loadFeed(0, loadFeed(1, done));
+            loadFeed(1, loadFeed);
             currentFeed = $('.header-title').text();
+            loadFeed(2, done);
         });
         
         // After test, reset Feed to the original feed
